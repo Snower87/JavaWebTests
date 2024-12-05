@@ -10,8 +10,20 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    //JUnit 5
+    //testImplementation platform('org.junit:junit-bom:5.10.0')
+    //testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+
+    //AssertJ for better assertions
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+
+    //Allure
+    implementation group: 'io.qameta.allure', name: 'allure-junit5', version: '2.29.0'
+
+    //Selenide
+    implementation group: 'com.codeborne', name: 'selenide', version: '7.5.1'
 }
 
 test {
