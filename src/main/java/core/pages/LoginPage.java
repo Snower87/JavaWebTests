@@ -72,4 +72,21 @@ public class LoginPage extends BasePage {
     public void loginWithVK() {
         vkButton.shouldBe(visible).click();
     }
+
+    @Step("Вводим текст в поле: логин {username}")
+    public void writeLogin(String username) {
+        usernameField.shouldBe(visible).click();
+        usernameField.shouldBe(visible).setValue(username);
+    }
+
+    @Step("Вводим текст в поле: пароль {password}")
+    public void writePassword(String password) {
+        passwordField.shouldBe(visible).click();
+        passwordField.shouldBe(visible).setValue(password);
+    }
+
+    @Step("Нажимаем на кнопку Войти в ОК")
+    public void clickLoginButton() {
+        loginButton.shouldBe(visible).click();
+    }
 }
