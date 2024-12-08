@@ -44,6 +44,7 @@ public class BaseTest {
 
     @AfterEach
     public void tearDown() {
+        //Закрываем веб-драйвер после каждого теста
         closeWebDriver();
     }
 }
