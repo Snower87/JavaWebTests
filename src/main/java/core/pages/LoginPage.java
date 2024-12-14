@@ -63,8 +63,8 @@ public class LoginPage extends BasePage {
 
     @Step("Вxодим на сайт с логином: {username} и {password}")
     public void setPassword(String password) {
-        passwordField. shouldBe (visible).click();
-        passwordField.shouldBe (visible).setValue (password);
+        passwordField.shouldBe(visible).click();
+        passwordField.shouldBe(visible).setValue (password);
     }
 
     @Step("Нажимаем кнопку Войти")
