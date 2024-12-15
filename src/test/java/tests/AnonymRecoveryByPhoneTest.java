@@ -46,5 +46,10 @@ public class AnonymRecoveryByPhoneTest extends BaseTest {
         String countryCode = recoveryPageByPhone.selectCountryByName("Гана");
         sleep(1000);
         assertEquals( "+233", countryCode, "Kод страны не совпадает с ожидаемым");
+
+        //Проверяем, что появляется надпись "Неправильный номер телефона."
+        recoveryPageByPhone.clickGetSMSCodeButton();
+        String errorMessage = recoveryPageByPhone.getErrorMessage();
+        assertEquals( "Неправильный номер телефона.", errorMessage, "Сообщение об ошибке не совпадает с ожидаемым");
     }
 }
