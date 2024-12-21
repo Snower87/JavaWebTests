@@ -41,7 +41,6 @@ public class RecoveryPageByPhone extends BasePage {
         checkBoxCountryOrRegion.click(); //Открываем список стран
         SelenideElement countryItem = $(String.format(".country-select_i[data-name='%s']", countryName)); //Находим страну по названию
         countryItem.scrollTo();
-        sleep(1000);
         String countryCode = countryItem.find(".country-select_code").text(); //Прокручиваем к стране и выбираем
         countryItem.click();
         return countryCode;
